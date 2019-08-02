@@ -36,5 +36,22 @@ namespace AdvancedWPFCourse
             employee.Execute();
 
         }
+
+        private void ChkBkgColor_OnClick(object sender, RoutedEventArgs e)
+        {
+            //if (chkBkgColor.IsChecked.Value == true)
+            //{
+            //    this.CustomStackPanel.Background = Brushes.BurlyWood;
+            //}
+            //else
+            //{
+            //    this.CustomStackPanel.Background = Brushes.LightGray;
+            //}
+        }
+
+        private void ChkBkgColor_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

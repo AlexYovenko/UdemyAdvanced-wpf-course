@@ -4,20 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdvancedWPFCourse"
+        xmlns:wpfTrainingApp="clr-namespace:WpfTrainingApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
     
-                <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="159*"/>
-            <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="590*"/>
-        </Grid.ColumnDefinitions>
-        <ListBox>
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <wpfTrainingApp:CustomStackPanel x:Name="CustomStackPanel" IsBackgroundBrown="False" />
+        <StackPanel>
+            <CheckBox x:Name ="chkBkgColor" Content="BrownCheckBox" Margin="293,140,0,0" Click="ChkBkgColor_OnClick" Height="22" />
+        </StackPanel>
+        <ListBox Grid.ColumnSpan="3" Margin="0,0,569,0">
             <local:Employee FirstName="Alex" LastName="Yovenko" />
             <local:Employee FirstName="Ivan" LastName="Pikuza" />
-            <Button Click="Execute_Clicked" Width="75" Content="Execute" />
-
+            <Button Click="Execute_Clicked" Width="75" Content="Execute" Background="Yellow" />
+            <StackPanel>
+                <Button Width="110" Height="45" Background="green" >
+                    <Button.Content>
+                        test
+                    </Button.Content>
+                </Button>
+            </StackPanel>
 
         </ListBox>
     </Grid>
