@@ -2,8 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AdvancedWPFCourse"
-             StartupUri="DataContext/DataContext.xaml">
+             StartupUri="Templates/ControlTemplate.xaml">
     <Application.Resources>
-         
+         <ResourceDictionary Source="ShinyRedButton.xaml"/>
     </Application.Resources>
 </Application>
