@@ -1,0 +1,29 @@
+﻿<Window x:Class="AdvancedWPFCourse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdvancedWPFCourse"
+        mc:Ignorable="d"
+    
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <local:CustomStackPanel x:Name="CustomStackPanel" IsBackgroundBrown="False">
+            <CheckBox x:Name ="chkBkgColor" Content="BrownCheckBox" Margin="293,140,0,0" Click="ChkBkgColor_OnClick" Height="22" />
+
+        </local:CustomStackPanel>
+        <ListBox Grid.ColumnSpan="3" Margin="0,0,569,0">
+            <local:Employee FirstName="Alex" LastName="Yovenko" />
+            <local:Employee FirstName="Ivan" LastName="Pikuza" />
+            <Button Click="Execute_Clicked" Width="75" Content="Execute" Background="Yellow" />
+            <StackPanel>
+                <Button Width="110" Height="45" Background="green" >
+                    <Button.Content>
+                        test
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+        </ListBox>
+    </Grid>
+</Window>
