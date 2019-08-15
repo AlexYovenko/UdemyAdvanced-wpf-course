@@ -6,12 +6,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace AdvancedWPFCourse
+namespace WpfTrainingApp
 {
-    class CustomStackPanel : StackPanel
+    public class CustomStackPanel : StackPanel
     {
-        public static DependencyProperty IsBrownColorProperty = DependencyProperty.Register("IsBackgroundBrown", typeof(bool), typeof(CustomStackPanel),
-            new PropertyMetadata(false, PropertyChangedCallback, CoerceValueCallback));
+        //public static DependencyProperty IsBrownColorProperty = DependencyProperty.Register("IsBackgroundBrown", typeof(bool), typeof(CustomStackPanel),
+        //    new PropertyMetadata(false, PropertyChangedCallback, CoerceValueCallback));
+                                                                                                    
+        public static DependencyProperty IsBrownColorProperty = DependencyProperty.Register("IsBackgroundBrown", typeof(bool), typeof(CustomStackPanel));
 
         private static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -22,7 +24,7 @@ namespace AdvancedWPFCourse
             }
             else
             {
-                customStackPanel.Background = Brushes.Brown;
+                customStackPanel.Background = Brushes.LightGray;
             }
         }
 

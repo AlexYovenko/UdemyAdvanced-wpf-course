@@ -1,5 +1,6 @@
 ﻿using AdvancedWPFCourse;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 
 namespace WpfTrainingApp.DataContext
@@ -27,5 +28,11 @@ namespace WpfTrainingApp.DataContext
             get { return sampleData.EmployeesEx; }
         }
 
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            sampleData.Employees.First().FirstName = "code changed";
+            sampleData.Employees.First().LastName = "code changed";
+
+        }
     }
 }

@@ -1,8 +1,8 @@
 ﻿<Application x:Class="AdvancedWPFCourse.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AdvancedWPFCourse"
-             StartupUri="Templates/ControlTemplate.xaml">
+             xmlns:local="clr-namespace:WpfTrainingApp"
+             StartupUri="Dialogs/MainDialog.xaml">
     <Application.Resources>
          <ResourceDictionary Source="ShinyRedButton.xaml"/>
     </Application.Resources>

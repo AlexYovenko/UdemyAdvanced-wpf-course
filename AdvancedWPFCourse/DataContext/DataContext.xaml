@@ -15,22 +15,34 @@
         <StackPanel>
             <StackPanel>
                 <DockPanel Margin="10" >
-                    <TextBox x:Name="txtBox1" DockPanel.Dock="Top" Margin="156,3,38,3" ToolTip="TextBox1" Text="{Binding Mode=OneWay}"/>
-                    <TextBox x:Name="txtBox2" DockPanel.Dock="Top" Margin="156,3,38,3" ToolTip="TextBox2" Text="{Binding Mode=OneWay}"/>
+                    <TextBox x:Name="txtBox1" DockPanel.Dock="Top" Margin="156,3,38,3" ToolTip="TextBox1" Text="{Binding Source={StaticResource EmpData}, Mode=OneWay, Path=FirstName}"/>
+                    <TextBox x:Name="txtBox2" DockPanel.Dock="Top" Margin="156,3,38,3" ToolTip="TextBox2" Text="{Binding  Source={StaticResource EmpData}, Mode=TwoWay, Path=LastName, UpdateSourceTrigger= PropertyChanged}"/>
                     <TextBox x:Name="txtBox3" DockPanel.Dock="Top" Margin="156,3,38,3" ToolTip="TextBox3" Text="{Binding Mode=OneWay}"/>
                 </DockPanel>
-                <Label>"StaticResource Binding"</Label>
-                <ListBox ItemsSource="{Binding Source={StaticResource EmpData}}" DisplayMemberPath="LastName"/>
+                <Button Click="ButtonBase_OnClick">Change Object</Button>
+                <!--<Label>"StaticResource Binding"</Label>
+                <ListBox ItemsSource="{Binding Source={StaticResource EmpData}}" DisplayMemberPath="LastName"/>-->
 
                 <Label>"DataContext Binding"</Label>
                 <ListBox ItemsSource="{Binding Employees}">
-
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="35" Width="250" Grid.RowSpan="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Text="Employee:" FontWeight="Bold" Grid.Column="0" Height="Auto"/>
+                                    <TextBox Text="{Binding Path=FirstName}"  Grid.Column="1" HorizontalAlignment="Left"/>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
-                <Label>"DisplayMemberPath"</Label>
 
-                <ListBox ItemsSource="{Binding EmployeesEx}" DisplayMemberPath="FirstName">
-
-                </ListBox>
+                <!--<Label>"DisplayMemberPath"</Label>
+                <ListBox ItemsSource="{Binding EmployeesEx}" DisplayMemberPath="FirstName"/>-->
             </StackPanel>
         </StackPanel>
     </Grid>

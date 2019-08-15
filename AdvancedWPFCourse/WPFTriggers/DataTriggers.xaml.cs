@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,16 +13,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfTrainingApp
+namespace WpfTrainingApp.WPFTriggers
 {
     /// <summary>
-    /// Interaction logic for DataBinding.xaml
+    /// Interaction logic for DataTriggers.xaml
     /// </summary>
-    public partial class DataBinding : Window
+    public partial class DataTriggers : Window
     {
-        public DataBinding()
+        public DataTriggers()
         {
             InitializeComponent();
+        }
+
+        SampleData sampleData = new SampleData();
+
+    
+
+        public ObservableCollection<Employee> Employees
+        {
+            get { return sampleData.Employees; }
+
         }
     }
 }

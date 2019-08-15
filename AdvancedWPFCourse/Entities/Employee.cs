@@ -4,21 +4,49 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvancedWPFCourse
+namespace WpfTrainingApp
 {
-    public class Employee
+    public class Employee:INotifyPropertyChanged
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        private string _firstName;
+        public string FirstName
+        {
+            get => _firstName;
+            set
+            {
+                if (value != _firstName)
+                {
+                    _firstName = value;
+                    OnPropertyChanged(nameof(FirstName));
+                }
+            }
+        }
+        private string _lastName;
+
+        public string LastName
+        {
+            get => _lastName;
+            set
+            {
+                if (value != _lastName)
+                {
+                    _lastName = value;
+                    OnPropertyChanged(nameof(LastName));
+                }
+            }
+        }
+
+        public string FullName => $"{FirstName} {LastName}";
 
 
         public override string ToString()
         {
-            return string.Format($"{FirstName} {LastName}");
+            return $"{FirstName} {LastName}";
         }
 
         public Employee()
@@ -28,6 +56,13 @@ namespace AdvancedWPFCourse
         public void Execute()
         {
             System.Windows.MessageBox.Show("Execute in Employee");
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

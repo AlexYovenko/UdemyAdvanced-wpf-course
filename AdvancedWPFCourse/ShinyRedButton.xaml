@@ -24,7 +24,7 @@
                                     <GradientStop Offset="0" Color="#aaffffff" />
                                     <GradientStop Offset="1" Color="Transparent" />
                                 </LinearGradientBrush>
-                            </Ellipse.Fill>
+                            </Ellipse.Fill> 
                         </Ellipse>
                         <ContentPresenter x:Name="ShinyRedButtonContent" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
                     </Grid>
@@ -51,6 +51,7 @@
                             <Setter Property="Foreground" Value="White" />
                         </Trigger>
                     </ControlTemplate.Triggers>
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

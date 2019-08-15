@@ -1,13 +1,12 @@
 ﻿using System.Windows;
-
-namespace WpfTrainingApp
+namespace WpfTrainingApp.WPFTriggers
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DependecyPropertyTriggers : Window
     {
-        public MainWindow()
+        public DependecyPropertyTriggers()
         {
             InitializeComponent();
         }
@@ -26,12 +25,18 @@ namespace WpfTrainingApp
 
         private void ChkBkgColor_OnClick(object sender, RoutedEventArgs e)
         {
-            CustomStackPanel.IsBackgroundBrown = chkBkgColor.IsChecked.Value;
+            //CustomStackPanel.IsBackgroundBrown = chkBkgColor.IsChecked.Value;
+
+            if (chkBkgColor.IsChecked.Value == true)
+            {
+                customStackPanel.IsBackgroundBrown = true;
+            }
+            else
+            {
+                customStackPanel.IsBackgroundBrown = false;
+            }
+
         }
 
-        private void ChkBkgColor_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

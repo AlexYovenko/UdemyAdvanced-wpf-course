@@ -55,10 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dialogs\GetZipDialog.xaml.cs">
+      <DependentUpon>GetZipDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MainDialog.xaml.cs">
+      <DependentUpon>MainDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\EmployeeEx.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="SampleData.cs" />
     <Compile Include="Templates\ControlTemplate.xaml.cs">
       <DependentUpon>ControlTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFTriggers\DataTriggers.xaml.cs">
+      <DependentUpon>DataTriggers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFTriggers\DependecyPropertyTriggers.xaml.cs">
+      <DependentUpon>DependecyPropertyTriggers.xaml</DependentUpon>
     </Compile>
     <Page Include="DataBinding\DataBinding.xaml">
       <SubType>Designer</SubType>
@@ -79,7 +92,7 @@
     <Compile Include="DataContext\DataContext.xaml.cs">
       <DependentUpon>DataContext.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DependecyProperty\CustomStackPanel.cs" />
+    <Compile Include="CustomStackPanel.cs" />
     <Compile Include="DataBinding\DataBinding.xaml.cs">
       <DependentUpon>DataBinding.xaml</DependentUpon>
     </Compile>
@@ -88,6 +101,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Dialogs\GetZipDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\MainDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShinyRedButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +116,14 @@
     <Page Include="Templates\ControlTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFTriggers\DataTriggers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFTriggers\DependecyPropertyTriggers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -123,5 +152,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
