@@ -9,20 +9,22 @@
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="167*" />
-                <ColumnDefinition Width="353*" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*" />
-                <RowDefinition Height="22*" />
-                <RowDefinition Height="22*" />
-                <RowDefinition Height="23*" />
-                <RowDefinition Height="53*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
             </Grid.RowDefinitions>
 
-            <Label Content="Which state do you live in? " Margin="0,10,0,0" Grid.Row="1" HorizontalAlignment="Right" />
+            <Label Grid.Column="1" Content="Which state do you live in? " Margin="0,10,0,0" Grid.Row="1" HorizontalAlignment="Right" />
 
-            <ComboBox x:Name="cmbState" Grid.Column="1" HorizontalAlignment="Left" Margin="5,10" Grid.Row="1"  Width="120" SelectionChanged="cmbState_SelectionChanged" >
+            <ComboBox x:Name="cmbState" Grid.Column="2" HorizontalAlignment="Left" Margin="5,10" Grid.Row="1"  Width="120" SelectionChanged="cmbState_SelectionChanged" >
                 <ComboBoxItem>Alabama</ComboBoxItem>
                 <ComboBoxItem>California</ComboBoxItem>
                 <ComboBoxItem>Colorado</ComboBoxItem>
@@ -31,8 +33,8 @@
                 <ComboBoxItem>Utah</ComboBoxItem>
             </ComboBox>
 
-            <Label x:Name="lblZip" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="5,10,0,0" Grid.Row="2" VerticalAlignment="Top" />
-        <StackPanel Grid.Row="4" Grid.Column="2">
+            <Label x:Name="lblZip" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="5,10,0,0" Grid.Row="2" VerticalAlignment="Top" />
+        <StackPanel Grid.Row="3" Grid.Column="2">
                 <Button x:Name="btnOpenFileDialog" Content="Open File" Click="BtnOpenFileDialog_OnClick" HorizontalAlignment="Center" Width="70"/>
 
 </StackPanel>
