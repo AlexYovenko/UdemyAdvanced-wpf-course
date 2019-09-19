@@ -38,6 +38,7 @@
                 <Button x:Name="btnOpenFileDialog" Content="Open File" Click="BtnOpenFileDialog_OnClick" HorizontalAlignment="Center" Width="70"/>
 
 </StackPanel>
+           
         </Grid>
     </Grid>
 </Window>

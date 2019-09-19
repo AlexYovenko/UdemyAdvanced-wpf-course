@@ -25,5 +25,7 @@
             <TextBox x:Name="txtFName" Margin="24,6,197,3" Grid.Row="1" Grid.Column="1" />
             <TextBox Margin="24,5,197,7"  Grid.Column="1" Grid.Row="2" Text="{ Binding ElementName=txtFName, Path=Text, Mode=TwoWay,
                 UpdateSourceTrigger= PropertyChanged }"/>
+       
+
     </Grid>
 </Window>

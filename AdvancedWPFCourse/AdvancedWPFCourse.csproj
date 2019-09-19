@@ -62,6 +62,9 @@
       <DependentUpon>MainDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\EmployeeEx.cs" />
+    <Compile Include="JustTests.xaml.cs">
+      <DependentUpon>JustTests.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="SampleData.cs" />
     <Compile Include="Templates\ControlTemplate.xaml.cs">
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\MainDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JustTests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

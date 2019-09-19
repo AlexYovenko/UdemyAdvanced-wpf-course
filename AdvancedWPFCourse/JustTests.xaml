@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfTrainingApp.JustTests"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTrainingApp"
+        mc:Ignorable="d"
+        Title="JustTests" Height="450" Width="800">
+    <StackPanel>
+        <DataGrid x:Name="summaryGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn>
+                    <DataGridTextColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DataContext.SecondColumnTitle,
+                       RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                        </DataTemplate>
+                    </DataGridTextColumn.HeaderTemplate>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Hard Coded Title" Width="*"/>
+                <!--<DataGridTextColumn Width="100">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{Binding DataContext.SecondColumnTitle, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type local:WpfTrainingApp.Dialogs}}}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>-->
+                <!--<DataGridTextColumn Width="150">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{Binding ThirdColumnTitle, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type local:WpfTrainingApp.Dialogs}}}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>

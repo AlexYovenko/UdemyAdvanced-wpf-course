@@ -15,17 +15,17 @@ using System.Windows.Shapes;
 namespace WpfTrainingApp
 {
     /// <summary>
-    /// Interaction logic for DataBinding.xaml
+    /// Interaction logic for JustTests.xaml
     /// </summary>
-    public partial class DataBinding : Window
+    public partial class JustTests : Window
     {
-    
-
-
-        public DataBinding()
+        public JustTests()
         {
             InitializeComponent();
             DataContext = this;
         }
+
+        public string SecondColumnTitle { get; set; } = "This is second";
+        public string ThirdColumnTitle { get; set; } = "This is third";
     }
 }
