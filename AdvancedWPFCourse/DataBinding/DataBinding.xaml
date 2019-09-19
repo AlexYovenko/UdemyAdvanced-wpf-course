@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfTrainingApp"
         mc:Ignorable="d"
         Title="DataBinding" Height="450" FontSize="22" Width="800">
+ 
     <Grid>
         <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="175" />

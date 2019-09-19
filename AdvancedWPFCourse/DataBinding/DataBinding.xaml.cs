@@ -19,9 +19,11 @@ namespace WpfTrainingApp
     /// </summary>
     public partial class DataBinding : Window
     {
+
         public DataBinding()
         {
             InitializeComponent();
+            DataContext = this;
         }
     }
 }

@@ -10,8 +10,11 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Window.Resources>
         <CollectionViewSource x:Key="EmpData" Source="{Binding Employees}" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Window.Resources>
+
     <Grid>
+        
         <StackPanel>
             <StackPanel>
                 <DockPanel Margin="10" >
@@ -43,6 +46,8 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                <Button x:Name="btnTest" Content="Test" Visibility="{Binding IsButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=true}"></Button>
+                <Button Content="Visible\Invisible" Click="Button_Click"></Button>
 
                 <!--<Label>"DisplayMemberPath"</Label>
                 <ListBox ItemsSource="{Binding EmployeesEx}" DisplayMemberPath="FirstName"/>-->
